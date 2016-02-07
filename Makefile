@@ -13,6 +13,11 @@ install:
 	npm install --save-dev babel-preset-react@6.3.13
 
 start_dev:
-	./node_modules/webpack/bin/webpack.js --watch& lein ring server
+	./node_modules/webpack/bin/webpack.js --watch& lein ring server-headless
+
+start_test:
+	lein test
 
 start:
+	./node_modules/webpack/bin/webpack.js -p
+	lein trampoline with-profile production ring server-headless
