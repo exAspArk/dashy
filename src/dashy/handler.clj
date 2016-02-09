@@ -2,17 +2,16 @@
   (:require (compojure [core :refer [defroutes GET]]
                        [route :as route])
             (ring.middleware [defaults :as middlewares])
-            (ring.util [response :as response])
-            (dashy [config :refer [config]])))
+            (dashy [config :refer [config]]
+                   [pages :as pages]
+                   [api :as api])))
 
 (defroutes app-routes
-  (GET "/" [] (handle-index))
+  (GET "/" []
+    (pages/index-page config))
+  (GET "/api/:resource-name" [resource-name]
+    (api/resource-api resource-name config))
   (route/not-found "Not Found"))
 
 (def app
   (middlewares/wrap-defaults app-routes middlewares/site-defaults))
-
-(defn- handle-index []
-  (response/content-type
-    (response/resource-response "index.html" {:root "public"})
-    "text/html"))

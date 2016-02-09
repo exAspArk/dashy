@@ -4,8 +4,12 @@
             [dashy.handler :refer :all]))
 
 (deftest test-app
-  (testing "main route"
+  (testing "index page"
     (let [response (app (mock/request :get "/"))]
+      (is (= (:status response) 200))))
+
+  (testing "resource api"
+    (let [response (app (mock/request :get "/api/clock"))]
       (is (= (:status response) 200))))
 
   (testing "not-found route"
