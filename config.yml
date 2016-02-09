@@ -1,0 +1,79 @@
+dashy:
+  width: 256
+  padding: 4
+  widgets:
+    logo:
+      height: 64
+      width: 64
+      widget: "image"
+    clock:
+      height: 64
+      width: 64
+      widget: "clock"
+    title:
+      height: 128 + 5
+      width: 128 + 5
+      widget: "text"
+      title: "Dashy"
+      description: "Dashboard framework in Clojure with React"
+      footer: "https://github.com/exAspArk/dashy"
+    visitors:
+      height: 64
+      width: 64
+      widget: "metrics"
+      title: "Visitors"
+      value: "1K"
+      difference: 30 # %
+      footer: "Last updated at 20:19"
+    top_contributors:
+      height: 128 + 5
+      width: 64
+      widget: "table"
+      title: "Top contributors"
+      values:
+        - column1: "exAspArk"
+          column2: "25"
+        - column1: "dhh"
+          column2: "13"
+        - column1: "tenderlove"
+          column2: "10"
+        - column1: "richhickey"
+          column2: "8"
+      footer: "Last updated at 20:19"
+    pull_requests:
+      height: 64
+      width: 64
+      widget: "plan"
+      title: "Pull requests"
+      value: 35
+      footer: "Last updated at 20:19"
+    issues:
+      height: 64
+      width: 64
+      widget: "plan"
+      title: "Issues"
+      value: 80
+      footer: "Last updated at 20:19"
+    feedback:
+      height: 128 + 5
+      width: 64
+      widget: "text"
+      title: "John Smith"
+      description: "Awasome! Thank you"
+      footer: "twitter"
+    downloads:
+      height: 128 + 5
+      width: 128 + 5
+      widget: "chart"
+      title: "Downloads per hour"
+      values:
+        - x: 0
+          y: 0
+        - x: 1
+          y: 1
+        - x: 2
+          y: 3
+        - x: 3
+          y: 5
+        - x: 4
+          y: 10

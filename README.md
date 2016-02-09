@@ -1,6 +1,6 @@
 # dashy
 
-FIXME
+Dashboard framework in Clojure (Compojure) with React
 
 ## Prerequisites
 
@@ -21,4 +21,4 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 MIT
