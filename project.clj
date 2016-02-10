@@ -7,7 +7,8 @@
                  [ring/ring-defaults "0.1.5"]
                  [clj-yaml "0.4.0"]]
   :plugins [[lein-ring "0.9.7"]
-            [cider/cider-nrepl "0.10.2"]]
+            [cider/cider-nrepl "0.10.2"]
+            [hiccup "1.0.5"]]
   :ring {:handler dashy.handler/app
          :auto-reload? true
          :auto-refresh? true}

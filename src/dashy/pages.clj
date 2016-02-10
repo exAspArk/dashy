@@ -1,7 +1,6 @@
 (ns dashy.pages
-  (:require (ring.util [response :as response])))
+  (:require (ring.util [response :as response])
+            (dashy.views [layout :as layout])))
 
 (defn index-page [_]
-  (response/content-type
-    (response/resource-response "index.html" {:root "public"})
-    "text/html"))
+  (layout/application "Dashy"))
